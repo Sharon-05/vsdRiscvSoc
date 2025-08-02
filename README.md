@@ -1,5 +1,5 @@
 ````markdown
-🏗️🔧⚙️ **RISC-V Toolchain Setup & Uniqueness Test** ⚙️🔧🏗️
+🏗️🔧⚙️ RISC-V Toolchain Setup & Uniqueness Test ⚙️🔧🏗️
 
 🎯 Objective
 Install the RISC-V toolchain in WSL (Windows Subsystem for Linux), configure environment variables,
@@ -16,7 +16,7 @@ sudo apt-get install -y git vim autoconf automake autotools-dev curl \
 
 ---
 
-🗂️ **Task 2 — Create Workspace & Capture Home Path**
+🗂️ Task 2 — Create Workspace & Capture Home Path
 Keep everything in `~/riscv_toolchain` for consistency.
 
 ```bash
@@ -28,7 +28,7 @@ cd riscv_toolchain
 
 ---
 
-📥 **Task 3 — Get Prebuilt RISC‑V GCC Toolchain**
+📥 Task 3 — Get Prebuilt RISC‑V GCC Toolchain
 
 ```bash
 wget "https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz"
@@ -37,7 +37,7 @@ tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz
 
 ---
 
-🔗 **Task 4 — Add Toolchain to PATH**
+🔗 Task 4 — Add Toolchain to PATH
 
 ```bash
 
@@ -47,7 +47,7 @@ source ~/.bashrc
 
 ---
 
-📦 **Task 5 — Install Device Tree Compiler (DTC)**
+📦 Task 5 — Install Device Tree Compiler (DTC)
 
 ```bash
 sudo apt-get install -y device-tree-compiler
@@ -55,7 +55,7 @@ sudo apt-get install -y device-tree-compiler
 
 ---
 
-🖥️ **Task 6 — Build and Install Spike (ISA Simulator)**
+🖥️ Task 6 — Build and Install Spike (ISA Simulator)
 
 ```bash
 cd $pwd/riscv_toolchain
@@ -69,7 +69,7 @@ sudo make install
 
 ---
 
-🧩 **Task 7 — Build and Install RISC‑V Proxy Kernel (pk)**
+🧩 Task 7 — Build and Install RISC‑V Proxy Kernel (pk)
 
 ```bash
 cd $pwd/riscv_toolchain
@@ -83,7 +83,7 @@ sudo make install
 
 ---
 
-🛤️ **Task 8 — Ensure pk is in PATH**
+🛤️ Task 8 — Ensure pk is in PATH
 
 ```bash
 echo 'export PATH=$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH' >> ~/.bashrc
@@ -92,7 +92,7 @@ source ~/.bashrc
 
 ---
 
-🔬 **Task 9 — (Optional) Install Icarus Verilog**
+🔬 Task 9 — (Optional) Install Icarus Verilog
 
 ```bash
 cd $pwd/riscv_toolchain
@@ -109,7 +109,7 @@ sudo make install
 
 ---
 
-✅ **Task 10 — Sanity Checks**
+✅ Task 10 — Sanity Checks
 
 ```bash
 which riscv64-unknown-elf-gcc
@@ -185,7 +185,7 @@ riscv64-unknown-elf-gcc -o unique_test unique_test.c
 spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 ```
 
-🖥️ **Sample Output**
+🖥️ **Output**
 
 ```
 bbl loader
