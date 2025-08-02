@@ -1,16 +1,5 @@
 🛠️ Task 1: RISC-V Toolchain Setup and Verification Using WSL
 
-![alt text](Architecture-RISC--V)
-
-
-![alt text](https://img.shields.io/badge/Toolchain-RISC--V%20GCC-blueviolet.svg)
-
-
-![alt text](https://img.shields.io/badge/Platform-WSL-orange.svg)
-
-
-![alt text](https://img.shields.io/badge/Status-✅%20Complete-success.svg)
-
 🎯 Objective
 
 Successfully install the RISC-V toolchain in WSL (Windows Subsystem for Linux), configure the environment variables, and verify that the essential binaries (gcc, objdump, and gdb) function correctly for cross-compilation development.
