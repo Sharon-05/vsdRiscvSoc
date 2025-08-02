@@ -1,33 +1,33 @@
 ````markdown
-# 🏗️🔧⚙️ RISC-V Toolchain Setup (Task 1) 🔧⚙️🏗️
+🏗️🔧⚙️ **RISC-V Toolchain Setup (Task 1)** 🔧⚙️🏗️
 
 ---
 
-# 🛠️ Task 1: RISC-V Toolchain Setup and Verification Using WSL
+🛠️ **Task 1: RISC-V Toolchain Setup and Verification Using WSL**
 
-## 🎯 Objective
+🎯 **Objective**  
 Install the **RISC-V toolchain** in WSL (Windows Subsystem for Linux), configure environment variables,  
 and verify that essential binaries (`gcc`, `objdump`, and `gdb`) function correctly for cross-compilation.
 
 ---
 
-## 📋 Prerequisites
+📋 **Prerequisites**
 - ✅ WSL installed and configured  
 - ✅ Downloaded `riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz` in **Windows Downloads** directory  
 - ✅ Basic knowledge of Linux command-line operations  
 
 ---
 
-## 🚀 Step-by-Step Implementation
+🚀 **Step-by-Step Implementation**
 
-### 🔹 Step 1: Navigate to Downloads Directory & Create Installation Path
+🔹 **Step 1: Navigate to Downloads Directory & Create Installation Path**
 ```bash
 cd /mnt/c/Users/rsdsr/Downloads
 sudo mkdir -p /opt/riscv
 ls -la riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz
 ````
 
-### 🔹 Step 2: Extract the RISC-V Toolchain
+🔹 **Step 2: Extract the RISC-V Toolchain**
 
 ```bash
 sudo tar -xzf riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz -C /opt/riscv --strip-components=1
@@ -35,7 +35,7 @@ ls -la /opt/riscv/
 ls -la /opt/riscv/riscv/
 ```
 
-### 🔹 Step 3: Configure PATH Environment Variable
+🔹 **Step 3: Configure PATH Environment Variable**
 
 ```bash
 echo 'export PATH=/opt/riscv/riscv/bin:$PATH' >> ~/.bashrc
@@ -43,7 +43,7 @@ source ~/.bashrc
 echo $PATH | grep riscv
 ```
 
-### 🔹 Step 4: Verify Toolchain Installation
+🔹 **Step 4: Verify Toolchain Installation**
 
 ```bash
 # 🏗️ Check GCC Compiler
@@ -64,25 +64,19 @@ ls -la /opt/riscv/riscv/bin/ | grep riscv32
 
 ---
 
-## 📊 Expected Results
+📊 **Expected Results**
 
-* 🖥️ **GCC Version:** `riscv32-unknown-elf-gcc (g04696df096) 14.2.0`
-* 🏹 **Target Architecture:** `riscv32-unknown-elf`
-* 📜 **Total Binaries:** \~64 RISC-V development tools available
-* ⚙️ **ISA Support:** `rv32i2p1_m2p0_a2p1_c2p0 (RV32IMAC)`
-
----
-
-✅ **Status:** Task 1 Successfully Completed 🎉
-
-```
+* 🖥️ GCC Version: `riscv32-unknown-elf-gcc (g04696df096) 14.2.0`
+* 🏹 Target Architecture: `riscv32-unknown-elf`
+* 📜 Total Binaries: \~64 RISC-V development tools available
+* ⚙️ ISA Support: `rv32i2p1_m2p0_a2p1_c2p0 (RV32IMAC)`
 
 ---
 
-That banner (`# 🏗️🔧⚙️ RISC-V Toolchain Setup (Task 1) 🔧⚙️🏗️`) will show at the top in big bold style with emojis so the evaluator instantly knows it’s Task 1.  
+✅ **Status:** Task 1 Successfully Completed 
 
-Want me to also design a **footer line** (like `--- 🚀 End of Task 1 🚀 ---`) to give it a nice finishing touch?
 ```
+
 
 
 📸 Implementation Output
