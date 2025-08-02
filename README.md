@@ -197,21 +197,13 @@ Total Binaries: 64 RISC-V development tools available
 ISA Support: rv32i2p1_m2p0_a2p1_c2p0 (RV32IMAC)
 
 📸 Implementation Output
+<img width="955" height="474" alt="Screenshot from 2025-08-01 18-10-35" src="https://github.com/user-attachments/assets/9841acc0-2949-4dc9-9497-fbe61eaba6c4" />
+<img width="1272" height="788" alt="image" src="https://github.com/user-attachments/assets/ac9491f3-86f3-4603-ac90-82818fdd0246" />
 
-![alt text](https://github.com/user-attachments/assets/7c5734d8-ea76-4e30-9940-532910074e1a)
+<img width="1210" height="773" alt="image" src="https://github.com/user-attachments/assets/2d264aa4-229a-4320-bd84-dd05270a0ac3" />
 
 
-![alt text](https://github.com/user-attachments/assets/f69d6fdc-2d29-4c3f-8b94-d961fd39b9b7)
 
-Screenshot demonstrating successful RISC-V toolchain installation with version verification of gcc, objdump, and gdb binaries in WSL environment.
 
-⚠️ Troubleshooting Guide
-Common Issues and Solutions:
-Issue	Cause	Solution
-command not found	Incorrect PATH configuration	Verify PATH points to /opt/riscv/riscv/bin
-Permission denied	Insufficient permissions	Use sudo for operations in /opt/riscv
-Multiple PATH entries	Repeated exports in .bashrc	Clean up .bashrc manually
-Extraction errors	Corrupted download	Re-download the toolchain archive
 
-dont need screenshot and dont copy the exact stuff
-but give space to uplad the unique.c file and my output
+
