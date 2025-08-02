@@ -175,7 +175,9 @@ int main(void) {
 ⚙️ **Compile Command Used**
 
 ```bash
-riscv64-unknown-elf-gcc -o unique_test unique_test.c
+riscv64-unknown-elf-gcc -O2 -Wall -march=rv64imac -mabi=lp64 \
+  -DUSERNAME="\"$(id -un)\"" -DHOSTNAME="\"$(hostname -s)\"" \
+  unique_test.c -o unique_test
 
 ```
 
