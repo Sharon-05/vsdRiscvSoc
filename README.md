@@ -1,6 +1,6 @@
 🛠️ Task 1: RISC-V Toolchain Setup and Verification Using WSL
 
-![alt text](https://img.shields.io/badge/Architecture-RISC--V-blue.svg)
+![alt text](Architecture-RISC--V)
 
 
 ![alt text](https://img.shields.io/badge/Toolchain-RISC--V%20GCC-blueviolet.svg)
