@@ -1,31 +1,32 @@
-````markdown
 🏗️🔧⚙️ **RISC-V Toolchain Setup (Task 1)** 🔧⚙️🏗️
 
 ---
 
-🛠️ Task 1: RISC-V Toolchain Setup and Verification Using WSL
+🛠️ **Task 1: RISC-V Toolchain Setup and Verification Using WSL**
 
-🎯 **Objective**  
-Install the **RISC-V toolchain** in WSL (Windows Subsystem for Linux), configure environment variables,  
+🎯 **Objective**
+Install the **RISC-V toolchain** in WSL (Windows Subsystem for Linux), configure environment variables,
 and verify that essential binaries (`gcc`, `objdump`, and `gdb`) function correctly for cross-compilation.
 
 ---
 
 📋 **Prerequisites**
-- ✅ WSL installed and configured  
-- ✅ Downloaded `riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz` in **Windows Downloads** directory  
-- ✅ Basic knowledge of Linux command-line operations  
+
+* ✅ WSL installed and configured
+* ✅ Downloaded `riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz` in **Windows Downloads** directory
+* ✅ Basic knowledge of Linux command-line operations
 
 ---
 
 🚀 **Step-by-Step Implementation**
 
 🔹 **Step 1: Navigate to Downloads Directory & Create Installation Path**
+
 ```bash
 cd /mnt/c/Users/rsdsr/Downloads
 sudo mkdir -p /opt/riscv
 ls -la riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz
-````
+```
 
 🔹 **Step 2: Extract the RISC-V Toolchain**
 
@@ -73,7 +74,8 @@ ls -la /opt/riscv/riscv/bin/ | grep riscv32
 
 ---
 
-✅ **Status:** Task 1 Successfully Completed 
+✅ **Status:** Task 1 Successfully Completed 🎉
+
 
 
 
