@@ -3,7 +3,7 @@
 
 ---
 
-🛠️ **Task 1: RISC-V Toolchain Setup and Verification Using WSL**
+🛠️ Task 1: RISC-V Toolchain Setup and Verification Using WSL
 
 🎯 **Objective**  
 Install the **RISC-V toolchain** in WSL (Windows Subsystem for Linux), configure environment variables,  
@@ -75,7 +75,6 @@ ls -la /opt/riscv/riscv/bin/ | grep riscv32
 
 ✅ **Status:** Task 1 Successfully Completed 
 
-```
 
 
 
