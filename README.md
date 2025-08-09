@@ -5,7 +5,7 @@
 Install the RISC-V toolchain in WSL (Windows Subsystem for Linux), configure environment variables,
 and verify that essential binaries (gcc, objdump, and gdb) function correctly for cross-compilation.
 
-🛠️🏗️ Task 1 — Install Base Developer Tools
+🛠️🏗️Task 1 — Install Base Developer Tools
 Install common prerequisites for RISC‑V toolchain and Spike.  
 ```bash
 sudo apt-get update
@@ -211,7 +211,7 @@ GCC_VLEN: 5
 <img width="1210" height="773" alt="image" src="https://github.com/user-attachments/assets/a4f78687-2455-4554-92c9-164e2d8bbb59" />
 
 
-🛠️ 🏗️Task 1 — Local RISCV Setup (Run, Disassemble,Decode)
+🛠️ 🏗️Task 2 — Local RISCV Setup (Run, Disassemble,Decode)
 ---
 
 🛠️ Step 1 — Compile All Programs with Uniqueness Macros
