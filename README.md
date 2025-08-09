@@ -5,7 +5,7 @@
 Install the RISC-V toolchain in WSL (Windows Subsystem for Linux), configure environment variables,
 and verify that essential binaries (gcc, objdump, and gdb) function correctly for cross-compilation.
 
-🛠️ Task 1 — Install Base Developer Tools
+🛠️🏗️ Task 1 — Install Base Developer Tools
 Install common prerequisites for RISC‑V toolchain and Spike.  
 ```bash
 sudo apt-get update
@@ -211,6 +211,81 @@ GCC_VLEN: 5
 <img width="1210" height="773" alt="image" src="https://github.com/user-attachments/assets/a4f78687-2455-4554-92c9-164e2d8bbb59" />
 
 
+🛠️ 🏗️Task 1 — Local RISCV Setup (Run, Disassemble,Decode)
+---
+
+🛠️ Step 1 — Compile All Programs with Uniqueness Macros
+
+**factorial.c**
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+factorial.c -o factorial
+```
+
+**max_array.c**
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+max_array.c -o max_array
+```
+
+**bitops.c**
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+bitops.c -o bitops
+```
+
+**bubble_sort.c**
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+bubble_sort.c -o bubble_sort
+```
+
+---
+
+🖥️ Step 2 — Run on Spike
+
+```bash
+spike ~/riscv_toolchain/riscv-pk/build/pk ./factorial
+spike ~/riscv_toolchain/riscv-pk/build/pk ./max_array
+spike ~/riscv_toolchain/riscv-pk/build/pk ./bitops
+spike ~/riscv_toolchain/riscv-pk/build/pk ./bubble_sort
+```
+
+📂 Step 3 — Generate Assembly & Disassembly
+
+**Assembly:**
+```bash
+riscv64-unknown-elf-gcc -O0 -S file.c -o file.s
+```
+
+**Disassembly (`main` only):**
+```bash
+riscv64-unknown-elf-objdump -d ./file | sed -n '/<main>:/,/^$/p' > file_main_objdump.txt
+```
+
+Repeat for all four `.c` files.
+
+---
+
+📊 Step 4— Instruction Decoding (from `factorial.c` main)
+
+| Instruction               | Opcode  | rd   | rs1  | rs2  | funct3 | funct7   | Binary                                   | Description               |
+|---------------------------|---------|------|------|------|--------|----------|------------------------------------------|---------------------------|
+| addi sp,sp,-32            | 0010011 | x2   | x2   | —    | 000    | —        | 111111111000 00010 000 00010 0010011     | sp = sp + (-32)           |
+| sd ra,24(sp)              | 0100011 | —    | x2   | x1   | 011    | —        | 0000000 00001 00010 011 11000 0100011    | mem[sp+24] = ra           |
+| lw a5,-20(s0)             | 0000011 | x15  | x8   | —    | 010    | —        | 111111111100 01000 010 01111 0000011     | a5 = mem[s0-20]           |
+| add a0,a5,a1              | 0110011 | x10  | x15  | x11  | 000    | 0000000  | 0000000 01011 01111 000 01010 0110011    | a0 = a5 + a1              |
+| ret (jalr x0,ra,0)        | 1100111 | x0   | x1   | —    | 000    | —        | 000000000000 00001 000 00000 1100111     | PC = ra (return)          |
+
+---
 
 
 
