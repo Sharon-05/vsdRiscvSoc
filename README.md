@@ -210,6 +210,12 @@ GCC_VLEN: 5
 
 <img width="1210" height="773" alt="image" src="https://github.com/user-attachments/assets/a4f78687-2455-4554-92c9-164e2d8bbb59" />
 
+Proof of Icarus Verilog log
+<img width="1210" height="773" alt="image" src="https://github.com/user-attachments/assets/1914fa3e-db28-490e-99ff-ffec95209927" />
+
+<img width="1210" height="773" alt="image" src="https://github.com/user-attachments/assets/1a9600c3-4118-42cd-ad89-e0a21e6d50a3" />
+
+
 
 🛠️ 🏗️Task 2 — Local RISCV Setup (Run, Disassemble,Decode)
 ---
